@@ -1,0 +1,255 @@
+/* Resetting default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Styling header navigation */
+header {
+  padding: 20px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+.logo img {
+  width: 100px; /* Adjust logo size as needed */
+  height: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: right;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 300;
+  color: #363638;
+}
+
+/* Styling hero section */
+.hero {
+  position: relative;
+  height: 150vh;
+  background-image: url("./images/hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center; /* Align hero content text */
+  padding: 20px; /* Add padding for better readability */
+}
+
+.hero-content {
+  color: #363638;
+  position: absolute;
+  bottom: 20px; /* Adjust distance from the bottom as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 600px; /* Adjust max-width as needed */
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 0px;
+  font-weight: 300;
+}
+
+/* Styling courses and projects section */
+.courses,
+.projects {
+  background-color: #f9f9f9;
+  padding: 50px 20px; /* Adjust padding as needed */
+}
+
+.courses h2,
+.projects h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Styling container for cards */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Styling individual cards */
+.card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  max-width: 300px; /* Adjust max-width as needed */
+  text-align: center;
+}
+
+.card img {
+  width: 100%; /* Ensure images fill their container */
+  height: 200px; /* Fixed height for all images */
+  object-fit: cover; /* Maintain aspect ratio and crop if necessary */
+  border-radius: 5px;
+}
+
+.card h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* Styling testimonials section */
+.testimonials {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Wrap testimonials if they exceed the container */
+  justify-content: center; /* Center testimonials horizontally */
+  align-items: stretch; /* Make testimonials stretch to equal height */
+  padding: 50px 20px;
+  margin-bottom: 20px; /* Adjust padding as needed */
+  text-align: center;
+}
+
+.testimonials h2 {
+  margin-bottom: 20px;
+}
+
+.testimonial {
+  flex: 1; /* Distribute available space equally among testimonials */
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.testimonial p {
+  color: #666;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 0; /* Remove margin-bottom to align text at the bottom */
+}
+
+.testimonial p:last-child {
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+}
+
+.testimonial-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: auto; /* Center the image horizontally */
+}
+
+/* Styling footer */
+footer {
+  background-color: #007af4;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p{
+  margin:10px;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Add this at the end of your existing CSS */
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 10px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  nav ul {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .container {
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+
+  .testimonial {
+    flex-basis: 100%;
+    max-width: calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+}
